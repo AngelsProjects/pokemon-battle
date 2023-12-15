@@ -1,4 +1,3 @@
-
 # Pokemon Battle Simulator
 
 ## Overview
@@ -63,6 +62,9 @@ pokemon-battle/
 ├── tsconfig.json
 └── README.md
 ```
+
+## Preview
+https://github.com/AngelsProjects/pokemon-battle/assets/25916455/86ae8e5a-7641-4a3b-933f-27a06d8ec7f0
 
 ## Contributing
 Contributions are welcome. Please ensure to follow the existing coding style and add unit tests for new functionalities.
