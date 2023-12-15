@@ -34,5 +34,6 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
-  }
+  },
+  "include": ["src/**/*", "scripts/**/*"]
 }

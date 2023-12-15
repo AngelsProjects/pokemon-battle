@@ -8,7 +8,7 @@ import {
   printWinner,
 } from './utils/printers';
 
-const battle = (trainer1: Trainer, trainer2: Trainer) => {
+function battle(trainer1: Trainer, trainer2: Trainer) {
   printBattleStart(trainer1.name, trainer2.name);
   // get the number of lower pokemons by trainer
   const trainer1Pokemons = trainer1.pokemons.length;
@@ -49,6 +49,6 @@ const battle = (trainer1: Trainer, trainer2: Trainer) => {
     trainer2Wins,
     lowerPokemons
   );
-};
+}
 
 export default battle;

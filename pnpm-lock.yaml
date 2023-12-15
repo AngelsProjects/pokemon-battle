@@ -6,18 +6,18 @@ settings:
 
 dependencies:
   '@faker-js/faker':
-    specifier: ^8.3.1
+    specifier: 8.3.1
     version: 8.3.1
 
 devDependencies:
   '@types/node':
-    specifier: ^20.10.4
+    specifier: 20.10.4
     version: 20.10.4
   ts-node:
-    specifier: ^10.9.2
+    specifier: 10.9.2
     version: 10.9.2(@types/node@20.10.4)(typescript@5.3.3)
   typescript:
-    specifier: ^5.3.3
+    specifier: 5.3.3
     version: 5.3.3
 
 packages:

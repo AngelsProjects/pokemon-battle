@@ -33,7 +33,7 @@ export function printDamage(
  *                                  // '| Speed: 100'
  *                                  // '---------------------------------------'
  */
-export const printPokemonInformation = ({
+export function printPokemonInformation({
   name,
   types,
   level,
@@ -41,7 +41,7 @@ export const printPokemonInformation = ({
   specialAttack,
   specialDefense,
   speed,
-}: Pokemon) => {
+}: Pokemon) {
   // Develop logic to print pokemon information
 
   console.log('--------POKEMON INFORMATION------------');
@@ -57,7 +57,7 @@ export const printPokemonInformation = ({
   console.log(`| Special Defense: ${specialDefense}`);
   console.log(`| Speed: ${speed}`);
   console.log('---------------------------------------');
-};
+}
 
 /**
  * Print the start of the battle between two trainers

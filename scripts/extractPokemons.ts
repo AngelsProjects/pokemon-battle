@@ -27,15 +27,15 @@ type Moves = {
   powerPoints: number;
 };
 
-const getPokemonData = async (name: string): Promise<Pokemon | null> => {
+async function getPokemonData(name: string): Promise<Pokemon | null> {
   return new Promise((resolve, reject) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${name}`;
 
     https
-      .get(url, (res) => {
+      .get(url, (res: any) => {
         let response = '';
 
-        res.on('data', (chunk) => {
+        res.on('data', (chunk: any) => {
           response += chunk;
         });
 
@@ -50,10 +50,10 @@ const getPokemonData = async (name: string): Promise<Pokemon | null> => {
                   new Promise(async (resolve, reject) => {
                     const moveUrl = move.url;
 
-                    https.get(moveUrl, (res) => {
+                    https.get(moveUrl, (res: any) => {
                       let response = '';
 
-                      res.on('data', (chunk) => {
+                      res.on('data', (chunk: any) => {
                         response += chunk;
                       });
 
@@ -107,11 +107,11 @@ const getPokemonData = async (name: string): Promise<Pokemon | null> => {
           }
         });
       })
-      .on('error', (error) => {
+      .on('error', (error: any) => {
         reject(error);
       });
   });
-};
+}
 
 const pokemonNames = [
   'alakazam',
@@ -134,13 +134,13 @@ const pokemonNames = [
   'umbreon',
 ];
 
-const main = async () => {
+async function main() {
   const pokemons: (Pokemon | null)[] = [];
   for (const name of pokemonNames) {
     const pokemon = await getPokemonData(name);
     if (pokemon) pokemons.push(pokemon);
   }
   console.log(JSON.stringify(pokemons));
-};
+}
 
 main();
